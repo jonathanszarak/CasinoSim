@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="poker.html">Poker</a></li>
+            <li><a href="blackjack.html">Blackjack</a></li>
+            <li><a href="roulette.html">Roulette</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Poker</h1>
+    </header>
+    <main>
+        <div id="game">
+            <div id="balance">
+                <h2>Balance: $<span id="balance-amount">1000</span></h2>
+            </div>
+            <div id="bet">
+                <label for="bet-amount">Bet Amount: $</label>
+                <input type="number" id="bet-amount" min="1" max="1000" value="10">
+                <button class="bn5" onclick="startGame()">Deal Cards</button>
+            </div>
+            <div id="player-hand">
+                <h2>Your Hand</h2>
+                <div id="player-cards"></div>
+            </div>
+            <div id="controls">
+                <button class="bn5" onclick="drawCard()">Draw Card</button>
+                <button class="bn5" onclick="endGame()">End Game</button>
+            </div>
+            <div id="message"></div>
+            <div id="guide">
+                <h2>How to Play</h2>
+                <p>Poker is a popular card game where players bet on the strength of their hand. Heres how to play</p>
+                <p>1. Place your bet and click "Deal Cards".</p>
+                <p>2. You will be dealt five cards.</p>
+                <p>3. Choose which cards to keep and which to discard.</p>
+                <p>4. Click "Draw Card" to replace the discarded cards.</p>
+                <p>5. Your final hand will be evaluated, and winnings will be awarded based on the hand strength.</p>
+            </div>
+        </div>
+    </main>
+    <script src="poker.js"></script>
+</body>
+</html>
